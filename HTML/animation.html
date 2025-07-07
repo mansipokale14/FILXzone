@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FILXzone - Animation Movies</title>
+  <link rel="stylesheet" href="./CSS/animation.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <div class="logo">FILXzone</div>
+      <select class="city-select">
+        <option>Choose City</option>
+        <option>Mumbai</option>
+        <option>Pune</option>
+        <option>Delhi</option>
+        <option>Nashik</option>
+      </select>
+    </div>
+    <input type="text" class="search-bar" placeholder="Search for movies, events, plays..." />
+    <div class="header-right">
+      <button class="sign-in-btn" onclick="location.href='login.html'">Sign In</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="movie.html">Movies</a>
+        <a href="animation.html" class="active">Animation</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Sidebar + Content -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <h3>Language</h3>
+        <label><input type="checkbox" data-filter-type="language" value="English" /> English</label>
+        <label><input type="checkbox" data-filter-type="language" value="Hindi" /> Hindi</label>
+        <label><input type="checkbox" data-filter-type="language" value="Tamil" /> Tamil</label>
+      </div>
+      <div>
+        <h3>Category</h3>
+        <label><input type="checkbox" data-filter-type="category" value="Family" /> Family</label>
+        <label><input type="checkbox" data-filter-type="category" value="Adventure" /> Adventure</label>
+      </div>
+      <div>
+        <h3>Show Time</h3>
+        <label><input type="checkbox" data-filter-type="time" value="Morning" /> Morning</label>
+        <label><input type="checkbox" data-filter-type="time" value="Afternoon" /> Afternoon</label>
+        <label><input type="checkbox" data-filter-type="time" value="Evening" /> Evening</label>
+        <label><input type="checkbox" data-filter-type="time" value="Night" /> Night</label>
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+      <!-- English Animation Movies -->
+      <section class="movie-section">
+        <h2>English Animation Movies</h2>
+        <div class="movie-grid">
+
+          <div class="movie-card">
+            <img src="./IMAGE/Angrybrid.jpg" alt="Angry Birds 3">
+            <div class="movie-info">
+              <h4>Angry Birds 3</h4>
+              <p>Birds and pigs unite again for a wacky adventure.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/angrybirds3">Watch Trailer</button>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img src="./IMAGE/InsideOut2.jpg" alt="Inside Out 2">
+            <div class="movie-info">
+              <h4>Inside Out 2</h4>
+              <p>New emotions join Riley's teenage mind.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/insideout2">Watch Trailer</button>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img src="./IMAGE/TheGarfield.jpg" alt="The Garfield Movie">
+            <div class="movie-info">
+              <h4>The Garfield Movie</h4>
+              <p>Garfield's lazy life turns into a wild adventure.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/garfieldmovie">Watch Trailer</button>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img src="./IMAGE/kungfupanda4.jpg" alt="Kung Fu Panda 4">
+            <div class="movie-info">
+              <h4>Kung Fu Panda 4</h4>
+              <p>Po faces a new villain in his journey as Dragon Warrior.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/kungfupanda4">Watch Trailer</button>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img src="./IMAGE/toystory4.jpg" alt="Toy Story 4">
+            <div class="movie-info">
+              <h4>Toy Story 4</h4>
+              <p>Woody, Buzz, and friends go on a new road trip with Forky.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/toystory4">Watch Trailer</button>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img src="./IMAGE/minions.jpg" alt="Minions">
+            <div class="movie-info">
+              <h4>Minions</h4>
+              <p>The origin of the lovable yellow henchmen.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/minions">Watch Trailer</button>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img src="./IMAGE/sing2.jpg" alt="Sing 2">
+            <div class="movie-info">
+              <h4>Sing 2</h4>
+              <p>The gang aims to perform with a rock legend in a futuristic city.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/sing2">Watch Trailer</button>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img src="./IMAGE/TheCroods.jpg" alt="The Croods: A New Age">
+            <div class="movie-info">
+              <h4>The Croods: A New Age</h4>
+              <p>The Croods encounter a rival family that challenges their way of living.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/croods">Watch Trailer</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hindi Animation Movies -->
+      <section class="movie-section">
+        <h2>Hindi Animation Movies</h2>
+        <div class="movie-grid">
+
+          <div class="movie-card">
+            <img src="./IMAGE/ChhotaBheem.jpg" alt="Chhota Bheem: Kung Fu Dhamaka">
+            <div class="movie-info">
+              <h4>Chhota Bheem: Kung Fu Dhamaka</h4>
+              <p>Bheem travels to China to prove his Kung Fu skills.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/chhotabheem">Watch Trailer</button>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img src="./IMAGE/HoneyBunnyKaJholmaal.jpg" alt="Honey Bunny Ka Jholmaal">
+            <div class="movie-info">
+              <h4>Honey Bunny Ka Jholmaal</h4>
+              <p>A comedy-filled ride with two mischievous pets.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/honeybunny">Watch Trailer</button>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img src="./IMAGE/MotuPatlu.png" alt="Motu Patlu">
+            <div class="movie-info">
+              <h4>Motu Patlu: King of Kings</h4>
+              <p>The iconic duo helps a lion regain his kingdom.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/motupatlu">Watch Trailer</button>
+            </div>
+          </div>
+
+          <div class="movie-card">
+            <img src="./IMAGE/shiva.jpg" alt="Shiva">
+            <div class="movie-info">
+              <h4>Shiva: The Hero</h4>
+              <p>Young superhero Shiva fights crime and protects the city.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/shiva">Watch Trailer</button>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Seat Selection Modal -->
+  <div id="seat-selection" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" id="seatClose">&times;</span>
+      <h3>Select Screen & Seats</h3>
+
+      <label for="screen-select" style="font-weight:bold;">Select Screen:</label>
+      <select id="screen-select" style="margin-bottom: 20px; padding: 10px; font-size: 16px;">
+        <option value="">-- Select Screen --</option>
+        <option value="Gold">Gold</option>
+        <option value="Silver">Silver</option>
+        <option value="Platinum">Platinum</option>
+      </select>
+
+      <p id="seat-info">0 seats selected.</p>
+      <div id="seat-map"></div>
+      <button id="confirmSeats" disabled>Confirm Booking</button>
+    </div>
+  </div>
+
+  <!-- Trailer Modal -->
+  <div id="trailerModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" id="trailerClose">&times;</span>
+      <iframe id="trailerFrame" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-social">
+        <a href="https://facebook.com"><img src="./IMAGE/facebook.jpg" alt="Facebook"></a>
+        <a href="https://instagram.com"><img src="./IMAGE/instagramf.jpg" alt="Instagram"></a>
+        <a href="https://x.com"><img src="./IMAGE/twitter.jpg" alt="Twitter"></a>
+        <a href="https://whatsapp.com"><img src="./IMAGE/WhatsApp .jpg" alt="WhatsApp"></a>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="#">News</a>
+        <a href="#">About More</a>
+        <a href="mailto:mansipokale12@gmail.com">Mail</a>
+        <a href="tel:+919324169041">Contact Us</a>
+      </div>
+      <div class="footer-credit">
+        <p>Copyright © 2024; Designed by <strong>Mansi Pokale</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./JS/animation.js"></script>
+</body>
+
+</html>
