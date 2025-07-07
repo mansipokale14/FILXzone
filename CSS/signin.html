@@ -1,0 +1,220 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  font-family: 'Segoe UI', sans-serif;
+  height: 120px; /* Larger header */
+  gap: 20px;
+}
+
+/* Left Side: Logo + City */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  font-size: 42px; /* Extra large logo */
+  font-weight: 900;
+  color: crimson;
+}
+
+/* City Dropdown */
+.city-select {
+  padding: 12px 16px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Search Bar - Balanced width */
+.search-bar {
+  flex-grow: 1;
+  max-width: 550px; /* Limit the width */
+  min-width: 800px;
+  padding: 14px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Right Side: Sign In + Navigation */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.sign-in-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+  background-color: #b3002d;
+}
+
+/* Nav Links */
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 18px;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: crimson;
+  bottom: -6px;
+  left: 0;
+}
+
+/* Optional: Responsive Shrinking */
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: none;
+  }
+
+  .header-right {
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+/* Main Sign-In Container */
+.sign-in-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 1rem;
+}
+.sign-in-container {
+  background: white;
+  padding: 4rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+.sign-in-container h2 {
+  margin-bottom: 2rem;
+  color: #b71c1c;
+  font-size: 2.4rem;
+}
+
+/* Form Styles */
+.sign-in-form .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.sign-in-form .form-group label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.sign-in-form .form-group input[type="text"],
+.sign-in-form .form-group input[type="password"] {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.sign-in-form .form-group input:focus {
+  border-color: #b71c1c;
+}
+
+/* Inline Group (Remember + Forgot) */
+.form-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.forgot-password {
+  font-size: 1rem;
+  color: #b71c1c;
+  text-decoration: none;
+}
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.btn-sign-in {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: #b71c1c;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-sign-in:hover {
+  background-color: #8e0000;
+}
+
+/* Sign-Up Link */
+.signup-link {
+  margin-top: 1.8rem;
+  font-size: 1.05rem;
+}
+.signup-link a {
+  color: #b71c1c;
+  text-decoration: none;
+  font-weight: 600;
+}
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .sign-in-container {
+    padding: 3rem 2rem;
+  }
+}
