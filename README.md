@@ -120,12 +120,6 @@ FlixZone is my personal showcase project. Contributions via issues and pull requ
 
 ---
 
-## 📜 License
-
-Distributed under the MIT License. See `LICENSE` for full terms.
-
----
-
 ## 📞 Contact
 
 **Developer**: Mansi Pokale
