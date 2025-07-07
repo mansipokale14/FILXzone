@@ -1,0 +1,452 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  height: 120px;
+  gap: 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  font-size: 42px;
+  font-weight: 900;
+  color: crimson;
+}
+
+.city-select {
+  padding: 12px 16px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.search-bar {
+  flex-grow: 1;
+  max-width: 550px;
+  min-width: 800px;
+  padding: 14px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.sign-in-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sign-in-btn:hover {
+  background-color: #b3002d;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 18px;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: crimson;
+  bottom: -6px;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .search-bar {
+    width: 100%;
+    max-width: none;
+  }
+
+  .header-right {
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+/* Layout */
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 30px 60px;
+  align-items: flex-start;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background-color: white;
+  padding: 35px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  flex-shrink: 0;
+  height:1800px
+}
+
+.sidebar div {
+  margin-bottom: 50px;
+}
+
+.sidebar h3 {
+  color: #b71c1c;
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+
+.sidebar label {
+  display: block;
+  margin: 16px 0;
+  font-size: 18px;
+}
+
+/* Content */
+.content {
+  flex: 1;
+}
+
+.movie-section {
+  margin-bottom: 60px;
+}
+
+.movie-section h2 {
+  color: #b71c1c;
+  font-size: 30px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.movie-section h2::before {
+  content: url('your-logo-url-here.png');
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+}
+
+/* Movie grid */
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.movie-card {
+  width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 14px;
+}
+
+.movie-info h4 {
+  font-size: 18px;
+  color: #b71c1c;
+  margin-bottom: 6px;
+}
+
+.movie-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.movie-info .book-ticket,
+.movie-info .trailer {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-right: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.movie-info .book-ticket:hover,
+.movie-info .trailer:hover {
+  background-color: #b71c1c;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 420px;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Seat Selection Modal Overlay */
+#seat-selection.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Box */
+#seat-selection .modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 720px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+}
+
+/* Close Button */
+#seat-selection .close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+}
+
+/* Modal Title */
+#seat-selection h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: crimson;
+}
+
+/* Seat Info Text */
+#seat-info {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Seat Grid Layout */
+#seat-map {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr); /* 1 label + 12 seats */
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+/* Row Label (e.g., A, B, C) */
+.seat-label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Individual Seat */
+.seat {
+  width: 40px;
+  height: 40px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  border: 2px solid #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.seat:hover {
+  background-color: #d6d6d6;
+  transform: scale(1.05);
+}
+
+/* Selected Seat */
+.seat.selected {
+  background-color: #43a047;
+  color: #fff;
+  border-color: #2e7d32;
+}
+
+/* Confirm Button */
+#confirmSeats {
+  background-color: crimson;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#confirmSeats:hover {
+  background-color: #b71c1c;
+}
+
+#confirmSeats:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+/* Footer Styling */
+.site-footer {
+  background-color: #d70040;
+  color: white;
+  padding: 10px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-social {
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-social img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  margin: 0 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fffecb;
+  text-decoration: underline;
+}
+
+.footer-credit {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+}
