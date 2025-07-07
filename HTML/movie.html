@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FILXzone – Movies</title>
+  <link rel="stylesheet" href="./CSS/movie.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <div class="logo">FILXzone</div>
+      <select class="city-select">
+        <option>Choose City</option>
+        <option>Mumbai</option>
+        <option>Pune</option>
+        <option>Delhi</option>
+        <option>Nashik</option>
+      </select>
+      <input type="text" class="search-bar" placeholder="Search for movies, events, plays..." />
+    </div>
+    <div class="header-right">
+      <button class="sign-in-btn"><a href="login.html" style="color:white;text-decoration:none;">Sign In</a></button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="movie.html" class="active">Movies</a>
+        <a href="animation.html">Animation</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <h3>Language</h3>
+        <label><input type="checkbox" data-filter-type="language" value="English" /> English</label>
+        <label><input type="checkbox" data-filter-type="language" value="Hindi" /> Hindi</label>
+        <label><input type="checkbox" data-filter-type="language" value="Marathi" /> Marathi</label>
+        <label><input type="checkbox" data-filter-type="language" value="Tamil" /> Tamil</label>
+      </div>
+      <div>
+        <h3>Category</h3>
+        <label><input type="checkbox" data-filter-type="category" value="Action" /> Action</label>
+        <label><input type="checkbox" data-filter-type="category" value="Comedy" /> Comedy</label>
+        <label><input type="checkbox" data-filter-type="category" value="Romance" /> Romance</label>
+        <label><input type="checkbox" data-filter-type="category" value="Drama" /> Drama</label>
+        <label><input type="checkbox" data-filter-type="category" value="Sci-Fi" /> Sci-Fi</label>
+      </div>
+      <div>
+        <h3>Show Time</h3>
+        <label><input type="checkbox" data-filter-type="time" value="Morning" /> Morning</label>
+        <label><input type="checkbox" data-filter-type="time" value="Afternoon" /> Afternoon</label>
+        <label><input type="checkbox" data-filter-type="time" value="Evening" /> Evening</label>
+        <label><input type="checkbox" data-filter-type="time" value="Night" /> Night</label>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+
+      <!-- Hindi Movies Section -->
+      <section class="movie-section">
+        <h2>Hindi Movies</h2>
+        <div class="movie-grid">
+          <div class="movie-card" data-language="Hindi" data-category="Action" data-time="Morning">
+            <img src="./IMAGE/movie3.jpg" alt="Pathaan Returns" />
+            <div class="movie-info">
+              <h4>Pathaan Returns</h4>
+              <p>A thrilling mission of India's top spy.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/pathaan456">Watch Trailer</button>
+            </div>
+          </div>
+          <div class="movie-card" data-language="Hindi" data-category="Action" data-time="Night">
+            <img src="./IMAGE/Jawaan.jpg" alt="Jawaan" />
+            <div class="movie-info">
+              <h4>Jawaan</h4>
+              <p>SRK in an explosive action-packed double role thriller.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/MVPTGNGiI-4">Watch Trailer</button>
+            </div>
+          </div>
+          <div class="movie-card" data-language="Hindi" data-category="Drama" data-time="Evening">
+            <img src="./IMAGE/Dunki.jpg" alt="Dunki" />
+            <div class="movie-info">
+              <h4>Dunki</h4>
+              <p>A tale of friendship and dreams directed by Rajkumar Hirani.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/-fZrYDjwbUQ">Watch Trailer</button>
+            </div>
+          </div>
+          <div class="movie-card" data-language="Hindi" data-category="Fantasy" data-time="Afternoon">
+            <img src="./IMAGE/brahmastra.jpg" alt="Brahmastra" />
+            <div class="movie-info">
+              <h4>Brahmastra</h4>
+              <p>A modern mythological saga filled with power and passion.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/BUjXzrgntcY">Watch Trailer</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Marathi Movies Section -->
+      <section class="movie-section">
+        <h2>Marathi Movies</h2>
+        <div class="movie-grid">
+          <div class="movie-card" data-language="Marathi" data-category="Drama" data-time="Afternoon">
+            <img src="./IMAGE/Chandramukhi.jpeg" alt="Chandramukhi" />
+            <div class="movie-info">
+              <h4>Chandramukhi</h4>
+              <p>A gripping supernatural drama.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/marathi789">Watch Trailer</button>
+            </div>
+          </div>
+          <div class="movie-card" data-language="Marathi" data-category="Romance" data-time="Evening">
+            <img src="./IMAGE/movie6.jpg" alt="Sairat" />
+            <div class="movie-info">
+              <h4>Sairat</h4>
+              <p>Love across castes in rural Maharashtra.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/mvEIK4aZQh0">Watch Trailer</button>
+            </div>
+          </div>
+          <div class="movie-card" data-language="Marathi" data-category="Comedy" data-time="Afternoon">
+            <img src="./IMAGE/Timepass 3.jpg" alt="Timepass 3" />
+            <div class="movie-info">
+              <h4>Timepass 3</h4>
+              <p>A coming-of-age comedy about young love and mischief.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/watch?v=aqPnsNUn1TM">Watch Trailer</button>
+            </div>
+          </div>
+          <div class="movie-card" data-language="Marathi" data-category="Drama" data-time="Morning">
+            <img src="./IMAGE/Me Shivaji Park_.jpg" alt="Me Shivaji Park" />
+            <div class="movie-info">
+              <h4>Me Shivaji Park</h4>
+              <p>Veterans investigating justice in this gripping thriller.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/1jA5ZExSHDE">Watch Trailer</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- English Movies Section -->
+      <section class="movie-section">
+        <h2>English Movies</h2>
+        <div class="movie-grid">
+          <div class="movie-card" data-language="English" data-category="Sci-Fi" data-time="Night">
+            <img src="./IMAGE/Galactic Mission.jpg" alt="Galactic Mission" />
+            <div class="movie-info">
+              <h4>Galactic Mission</h4>
+              <p>Adventure beyond the stars.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/scifi001">Watch Trailer</button>
+            </div>
+          </div>
+          <div class="movie-card" data-language="English" data-category="Drama" data-time="Morning">
+            <img src="./IMAGE/Oppenheimer.jpg" alt="Oppenheimer" />
+            <div class="movie-info">
+              <h4>Oppenheimer</h4>
+              <p>The story of the man who built the atomic bomb.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/uYPbbksJxIg">Watch Trailer</button>
+            </div>
+          </div>
+          <div class="movie-card" data-language="English" data-category="Sci-Fi" data-time="Afternoon">
+            <img src="./IMAGE/Dune.jpg" alt="Dune: Part Two" />
+            <div class="movie-info">
+              <h4>Dune: Part Two</h4>
+              <p>Paul Atreides rises among the Fremen in this epic continuation.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/U2Qp5pL3ovA">Watch Trailer</button>
+            </div>
+          </div>
+          <div class="movie-card" data-language="English" data-category="Fantasy" data-time="Evening">
+            <img src="./IMAGE/Avatar.jpg" alt="Avatar 2" />
+            <div class="movie-info">
+              <h4>Avatar: The Way of Water</h4>
+              <p>Return to Pandora in this visual masterpiece.</p>
+              <button class="book-ticket">Book Ticket</button>
+              <button class="trailer" data-trailer="https://www.youtube.com/embed/d9MyW72ELq0">Watch Trailer</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+  <!-- Seat Selection Modal -->
+  <div id="seat-selection" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" id="seatClose">&times;</span>
+      <h3>Select Screen & Seats</h3>
+
+      <label for="screen-select" style="font-weight:bold;">Select Screen:</label>
+      <select id="screen-select" style="margin-bottom: 20px; padding: 10px; font-size: 16px;">
+        <option value="">-- Select Screen --</option>
+        <option value="Gold">Gold</option>
+        <option value="Silver">Silver</option>
+        <option value="Platinum">Platinum</option>
+      </select>
+
+      <p id="seat-info">0 seats selected.</p>
+      <div id="seat-map"></div>
+      <button id="confirmSeats" disabled>Confirm Booking</button>
+    </div>
+  </div>
+
+
+  <!-- Trailer Modal -->
+  <div id="trailerModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" id="trailerClose">&times;</span>
+      <iframe id="trailerFrame" width="100%" height="315" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-social">
+        <a href="https://www.facebook.com/" target="_blank"><img src="./IMAGE/facebook.jpg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="./IMAGE/instagramf.jpg" alt="Instagram"></a>
+        <a href="https://x.com/" target="_blank"><img src="./IMAGE/twitter.jpg" alt="Twitter"></a>
+        <a href="https://www.whatsapp.com/" target="_blank"><img src="./IMAGE/WhatsApp .jpg" alt="WhatsApp"></a>
+      </div>
+
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="https://www.lokmat.com/">News</a>
+        <a href="https://www.bing.com/search?q">About More</a>
+        <a href="mailto:mansipokale12@gmail.com">Mail</a>
+        <a href="tel:+919324169041">Contact Us</a>
+      </div>
+
+      <div class="footer-credit">
+        <p>Copyright © 2024; Designed by <strong>Mansi Pokale</strong></p>
+      </div>
+    </div>
+  </footer>
+  <script src="./JS/movie.js"></script>
+</body>
+
+</html>
